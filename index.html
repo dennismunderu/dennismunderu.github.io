@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dennis Munderu - Data Analyst</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bg-light': '#FFFFFF',
+            'bg-soft': '#DBDBDB',
+            'card-bg': '#F8F9FA',
+            'text-dark': '#2B2B2B',
+            'text-muted': '#555555',
+            'accent-teal': '#0096C7',
+            'accent-teal-light': '#00B4D8',
+            'border-gray': '#B0B0B0',
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* Subtle gradient and pattern background */
+    body {
+      background: linear-gradient(135deg, #FFFFFF, #DBDBDB);
+      background-image:
+        radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+        linear-gradient(135deg, #FFFFFF, #DBDBDB);
+      background-size: 35px 35px, 200% 200%;
+      animation: gradientShift 25s ease infinite;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%, 0 0; }
+      50% { background-position: 100% 50%, 0 0; }
+      100% { background-position: 0% 50%, 0 0; }
+    }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #F1F1F1; }
+    ::-webkit-scrollbar-thumb { background: #B0B0B0; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #0096C7; }
+
+    /* Smooth hover lift effect */
+    .hover-lift {
+      transition: all 0.3s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+  </style>
+</head>
+
+<body class="text-text-dark min-h-screen font-sans">
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-white/80 backdrop-blur-sm border-b border-border-gray z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-bold text-accent-teal">Dennis Munderu</h1>
+        <p class="text-sm text-text-muted font-medium">Data Analyst</p>
+      </div>
+      <div class="flex items-center space-x-8">
+        <nav class="space-x-8 text-sm hidden md:block">
+          <a href="#about" class="hover:text-accent-teal transition">About</a>
+          <a href="#skills" class="hover:text-accent-teal transition">Skills</a>
+          <a href="#projects" class="hover:text-accent-teal transition">Projects</a>
+          <a href="#contact" class="hover:text-accent-teal transition">Contact</a>
+        </nav>
+        <a href="#resume" class="px-4 py-2 bg-accent-teal text-white font-medium rounded-lg hover:bg-accent-teal-light transition text-sm">
+          Resume
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero / About -->
+  <section id="about" class="pt-28 pb-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+
+        <!-- Photo -->
+        <div class="flex justify-center md:justify-end">
+          <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent-teal shadow-xl hover-lift">
+            <img src="photo.jpg" 
+                 alt="Dennis Munderu - Data Analyst" 
+                 class="w-full h-full object-cover"
+                 onerror="this.src='https://via.placeholder.com/320x320/DBDBDB/0096C7?text=Photo'; this.onerror=null;">
+          </div>
+        </div>
+
+        <!-- Intro + About Text -->
+        <div class="md:col-span-2 space-y-6">
+
+          <!-- EDIT INTRO HERE -->
+          <div class="space-y-4">
+            <p class="text-lg leading-relaxed text-text-muted">
+              👋 Hi there! Welcome to my data portfolio.  
+              I’m passionate about using data to uncover insights and drive meaningful decisions.
+            </p>
+            <p class="text-lg leading-relaxed text-text-muted">
+              Here you’ll find a selection of my analytics projects — from business dashboards to predictive models.
+            </p>
+          </div>
+
+          <!-- About Me Heading -->
+          <h2 class="text-2xl font-semibold text-accent-teal mt-8">About Me</h2>
+          <p class="text-lg leading-relaxed text-text-muted">
+            I’m a data analyst with over 4 years of experience turning raw data into actionable insights. 
+            I specialize in SQL, Python, Power BI, and Tableau to uncover trends, optimize processes, 
+            and support strategic decision-making.
+          </p>
+          <p class="text-lg font-medium text-accent-teal">
+            Let's explore data together.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="py-10 text-center">
+    <a href="resume.pdf" download 
+       class="px-6 py-3 bg-accent-teal text-white font-semibold rounded-lg hover:bg-accent-teal-light transition shadow-md hover-lift">
+       Download Resume
+    </a>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 px-6 bg-card-bg/50">
+    <div class="max-w-5xl mx-auto">
+      <h3 class="text-3xl font-bold mb-10 text-center text-accent-teal">Technical Skills</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="flex flex-col items-center p-6 bg-white rounded-xl border border-border-gray hover-lift">
+          <div class="text-5xl mb-3">🐍</div>
+          <p class="text-sm font-medium">Python</p>
+          <p class="text-xs text-text-muted">Pandas, NumPy, Matplotlib</p>
+        </div>
+        <div class="flex flex-col items-center p-6 bg-white rounded-xl border border-border-gray hover-lift">
+          <div class="text-5xl mb-3">🧩</div>
+          <p class="text-sm font-medium">SQL</p>
+          <p class="text-xs text-text-muted">Queries, Joins, CTEs</p>
+        </div>
+        <div class="flex flex-col items-center p-6 bg-white rounded-xl border border-border-gray hover-lift">
+          <div class="text-5xl mb-3">📊</div>
+          <p class="text-sm font-medium">Tableau</p>
+          <p class="text-xs text-text-muted">Dashboards, Stories</p>
+        </div>
+        <div class="flex flex-col items-center p-6 bg-white rounded-xl border border-border-gray hover-lift">
+          <div class="text-5xl mb-3">📈</div>
+          <p class="text-sm font-medium">Power BI</p>
+          <p class="text-xs text-text-muted">DAX, Power Query</p>
+        </div>
+        <div class="flex flex-col items-center p-6 bg-white rounded-xl border border-border-gray hover-lift">
+          <div class="text-5xl mb-3">🧮</div>
+          <p class="text-sm font-medium">Excel</p>
+          <p class="text-xs text-text-muted">Pivot Tables, VLOOKUP</p>
+        </div>
+        <div class="flex flex-col items-center p-6 bg-white rounded-xl border border-border-gray hover-lift">
+          <div class="text-5xl mb-3">🧠</div>
+          <p class="text-sm font-medium">Statistics</p>
+          <p class="text-xs text-text-muted">A/B Testing, Regression</p>
+        </div>
+        <div class="flex flex-col items-center p-6 bg-white rounded-xl border border-border-gray hover-lift">
+          <div class="text-5xl mb-3">💻</div>
+          <p class="text-sm font-medium">Git & GitHub</p>
+          <p class="text-xs text-text-muted">Version Control</p>
+        </div>
+        <div class="flex flex-col items-center p-6 bg-white rounded-xl border border-border-gray hover-lift">
+          <div class="text-4xl mb-3 text-center break-words">🗣️</div>
+          <p class="text-sm font-medium leading-tight">Presentation</p>
+          <p class="text-xs text-text-muted">Insights to Action</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+
+      <!-- Featured Project -->
+      <h3 class="text-3xl font-bold mb-8 text-center text-accent-teal">Featured Project</h3>
+      <div class="flex justify-center mb-16">
+        <div class="grid grid-cols-1 gap-8 w-full max-w-md md:max-w-2xl justify-items-center">
+          <a href="#" class="group block hover-lift">
+            <div class="bg-white rounded-xl overflow-hidden border border-border-gray transition w-full">
+              <div class="bg-bg-soft h-48 flex items-center justify-center">
+                <span class="text-6xl group-hover:text-accent-teal transition">📈</span>
+              </div>
+              <div class="p-6">
+                <h4 class="text-xl font-semibold mb-2">Sales Forecasting Dashboard</h4>
+                <p class="text-sm text-text-muted">Click to view details</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Other Projects -->
+      <h3 class="text-3xl font-bold mb-8 text-center text-accent-teal">Other Projects</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white/70 rounded-xl p-8 border border-dashed border-border-gray text-center hover-lift">
+          <div class="text-6xl mb-4 text-gray-400">📊</div>
+          <h4 class="text-lg font-semibold">Customer Segmentation</h4>
+          <p class="text-sm text-text-muted mt-2">Coming soon</p>
+        </div>
+        <div class="bg-white/70 rounded-xl p-8 border border-dashed border-border-gray text-center hover-lift">
+          <div class="text-6xl mb-4 text-gray-400">💹</div>
+          <h4 class="text-lg font-semibold">Financial KPI Tracker</h4>
+          <p class="text-sm text-text-muted mt-2">In progress</p>
+        </div>
+        <div class="bg-white/70 rounded-xl p-8 border border-dashed border-border-gray text-center hover-lift">
+          <div class="text-6xl mb-4 text-gray-400">📑</div>
+          <h4 class="text-lg font-semibold">NPS Survey Analysis</h4>
+          <p class="text-sm text-text-muted mt-2">Finalizing</p>
+        </div>
+      </div>
+      <p class="text-center text-text-muted mt-8 text-sm">More projects coming soon!</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 bg-card-bg/50">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-4xl font-bold mb-10 text-center text-accent-teal">Let's Connect</h3>
+      <form action="https://formspree.io/f/xpwogkqa" method="POST" class="max-w-2xl mx-auto mb-12 space-y-6">
+        <div><input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 bg-white border border-border-gray rounded-lg focus:border-accent-teal focus:outline-none transition"></div>
+        <div><input type="email" name="_replyto" placeholder="your@email.com" required class="w-full px-4 py-3 bg-white border border-border-gray rounded-lg focus:border-accent-teal focus:outline-none transition"></div>
+        <div><textarea name="message" rows="5" placeholder="Your Message..." required class="w-full px-4 py-3 bg-white border border-border-gray rounded-lg focus:border-accent-teal focus:outline-none transition resize-none"></textarea></div>
+        <button type="submit" class="w-full py-3 bg-accent-teal text-white font-semibold rounded-lg hover:bg-accent-teal-light transition hover-lift">Send Message</button>
+      </form>
+
+      <div class="flex justify-center space-x-10 text-3xl">
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" class="hover:text-accent-teal transition" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="hover:text-accent-teal transition" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:you@email.com" class="hover:text-accent-teal transition" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-sm text-text-muted border-t border-border-gray">
+    <p>© 2025 Dennis Munderu. Crafted with data & passion.</p>
+  </footer>
+
+</body>
+</html>
